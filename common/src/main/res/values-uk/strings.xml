@@ -555,7 +555,7 @@
     <string name="cluster_song_gate">Автоактивація музичної картки</string>
     <string name="cluster_song_gate_description">Картка не з’являється, доки медіастек авто не буде відкрито. Відкриття шлюзу робить це: на мить з’являється екран медіа, потім повернення в DiPlay. Залиште вимкненим, щоб уникнути миготіння. Застосовується одразу.</string>
     <string name="launcher_map_sharing">Ділитися живою картою з іншими лаунчерами</string>
-    <string name="launcher_map_sharing_description">Лаунчери з підтримкою DiPlay можуть показувати живу карту панелі приладів на своєму головному екрані. Типово вимкнено, бо тоді карту зможе запитати будь-який застосунок на головному пристрої. Див. docs/LAUNCHER_INTEGRATION.md.</string>
+    <string name="launcher_map_sharing_description">Сумісні лаунчери можуть показувати карту панелі приладів на головному екрані. У версії Xiaoling типово ввімкнено; тут можна вимкнути. На Android 11 і новіших інші лаунчери також можуть запитувати карту. Докладніше: docs/LAUNCHER_INTEGRATION.md.</string>
     <string name="location_reporting_reconnects">Зміна цього налаштування перепідключає активний сеанс CarPlay.</string>
     <string name="navigation_widget_description">Наступний поворот, відстань, прибуття й пісня з CarPlay</string>
     <string name="navigation_widget_label">Навігація CarPlay</string>

@@ -30,7 +30,7 @@ class VirtualClusterDisplayTest {
         }
     }
 
-    @Test fun virtualStreamRemainsOptIn() { assertNull(config()) }
+    @Test fun explicitlyDisabledVirtualStreamStaysOff() { assertNull(config()) }
 
     @Test fun absentPhysicalClusterNegotiates16By9AndSetsMirrorAspect() {
         AirPlayPersistence.saveClusterMapEnabled(activity, true)

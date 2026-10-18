@@ -66,7 +66,7 @@ DiPlay can hand the live map to your launcher as a [`SurfaceControlViewHost.Surf
 Requirements:
 
 - Android 11 (API 30) or newer on the head unit;
-- the driver turns on **Share the live map with other launchers** in DiPlay (off by default);
+- **Share the live map with other launchers** is enabled in DiPlay (on by default in this Xiaoling fork);
 - CarPlay connected with **CarPlay map on instrument cluster** on, for the map itself.
 
 A complete working example is the sample app in [`samples/maphost`](../samples/maphost/src/main/java/com/diplay/maphost/MainActivity.kt).
@@ -219,6 +219,13 @@ It runs without system privileges. BYD's home stays installed, and the **BYD hom
 
 ## Surface output for Xiaoling instrument clusters (fork extension, protocol v1)
 
+This Xiaoling build defaults both **CarPlay map on instrument cluster** and
+**Share the live map with other launchers** to on for new installations. Saved
+choices, including an explicit off, survive upgrades. Both switches remain under
+**Settings → Advanced**. Changing the cluster-map switch applies on reconnection;
+turning sharing off immediately revokes attached clients. The existing Android
+11+ embed interface also follows the sharing switch and permits other launchers.
+
 This fork also exports `com.shihab.diplay.action.MAP_SURFACE` on Android API 25+.
 It sends the independent instrument-cluster video to a client-owned `Surface`,
 without `SurfaceControlViewHost`. The existing **Share the live map with other
@@ -228,7 +235,7 @@ change its negotiated dimensions, or route to BYD hardware.
 
 Only UIDs containing `local.t03.xiaoling` or `com.iflytek.cutefly.speechclient` may
 attach (up to two simultaneous clients). This is a package allowlist, not a
-cryptographic identity guarantee; consent remains necessary. Video uses a separate
+cryptographic identity guarantee; sharing must remain enabled. Video uses a separate
 mirror decoder and does not take ownership of the primary display output.
 
 Discover the service by action in the selected DiPlay package and explicitly bind.

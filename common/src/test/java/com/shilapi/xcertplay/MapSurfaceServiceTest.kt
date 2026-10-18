@@ -41,6 +41,11 @@ class MapSurfaceServiceTest {
             shadowOf(Looper.getMainLooper()).idle()
         }
         try {
+            assertTrue(AirPlayPersistence.loadClusterMapEnabled(service))
+            assertTrue(AirPlayPersistence.loadLauncherMapSharing(service))
+            attach()
+            assertEquals(MapSurfaceEndpoint.ATTACHED, replies.last().what)
+            assertEquals(1, outputs.size)
             AirPlayPersistence.saveLauncherMapSharing(service, false)
             attach()
             assertEquals("disabled", replies.last().data.getString("error"))

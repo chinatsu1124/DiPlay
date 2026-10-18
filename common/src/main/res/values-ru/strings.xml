@@ -539,7 +539,7 @@
     <string name="center_map_usage_missing">Доступ к истории использования: не разрешён, поэтому карточка показывается поверх всех приложений. Через ADB: adb shell appops set %1$s GET_USAGE_STATS allow</string>
     <string name="center_map_no_permission_screen">На этом головном устройстве нет экрана настроек для этого разрешения. Разрешите его через ADB.</string>
     <string name="launcher_map_sharing">Делиться живой картой с другими лаунчерами</string>
-    <string name="launcher_map_sharing_description">Лаунчеры с поддержкой DiPlay смогут показывать живую карту приборной панели на своём главном экране. Выключено по умолчанию, потому что тогда карту сможет запросить любое приложение на головном устройстве. Подробнее: docs/LAUNCHER_INTEGRATION.md.</string>
+    <string name="launcher_map_sharing_description">Совместимые лаунчеры могут показывать карту приборной панели на главном экране. В версии Xiaoling включено по умолчанию; здесь можно отключить. На Android 11 и новее другие лаунчеры тоже могут запросить карту. Подробнее: docs/LAUNCHER_INTEGRATION.md.</string>
     <string name="turn_card_overlay_size">Размер собственной карточки</string>
     <string name="turn_card_overlay_opacity">Прозрачность собственной карточки</string>
     <string name="turn_card_overlay_opacity_option">%1$d %%</string>

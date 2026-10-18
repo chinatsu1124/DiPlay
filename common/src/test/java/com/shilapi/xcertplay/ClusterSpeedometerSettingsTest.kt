@@ -84,6 +84,7 @@ class ClusterSpeedometerSettingsTest {
     }
 
     @Test fun speedometerControlsOnlyAppearWithClusterMapEnabled() {
+        AirPlayPersistence.saveClusterMapEnabled(context, false)
         val controller = Robolectric.buildActivity(DiPlayActivity::class.java,
             Intent(context, DiPlayActivity::class.java).putExtra("page", "settings")).setup()
         val activity = controller.get()

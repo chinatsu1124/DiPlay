@@ -39,6 +39,8 @@ class ClusterSettingsConsentTest {
         val app = RuntimeEnvironment.getApplication()
         app.getSharedPreferences("xcertplay_airplay", 0).edit().clear().commit()
         app.getSharedPreferences("diplay", 0).edit().clear().commit()
+        // Exercise a user who explicitly disabled the fork's default map output.
+        AirPlayPersistence.saveClusterMapEnabled(app, false)
         // These existing sessions have already answered the optional notification prompt.
         app.getSharedPreferences("diplay", 0).edit().putBoolean("notification_asked", true).commit()
         PendingReconnect.clear()

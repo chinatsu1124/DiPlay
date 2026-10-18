@@ -3,7 +3,7 @@ package com.shilapi.xcertplay
 import android.view.Surface
 import com.shilapi.xcertplay.glance.CarPlayGlance
 
-/** Surface bridge for non-Android clusters; retains the existing explicit sharing consent. */
+/** Surface bridge for non-Android clusters; honors the shared map setting. */
 class MapSurfaceService : MapSurfaceEndpoint() {
     private var stopObserving: (() -> Unit)? = null
     private val changed: (Boolean) -> Unit = { publishState() }

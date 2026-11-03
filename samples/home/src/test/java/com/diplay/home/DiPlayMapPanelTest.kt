@@ -62,4 +62,6 @@ class DiPlayMapPanelTest {
     @Test fun bindsTheDebugBuild() = assertBinds("com.shihab.diplay.hudtest")
 
     @Test fun bindsTheAutomotiveBuild() = assertBinds("com.shilapi.xcertplay")
+
+    @Test fun bindsTheXiaolingFork() = assertBinds("com.shihab.diplay.xl")
 }

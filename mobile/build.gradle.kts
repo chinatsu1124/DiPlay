@@ -14,11 +14,13 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.shihab.diplay"
+        // 小零定制版：独立包名，和官方 DiPlay 并存（小零装好后停用官方，卸掉定制版时再启用回去）。
+        // versionCode = 上游 versionCode × 100 + 定制版序号，跟上游新版时序号归 1。
+        applicationId = "com.shihab.diplay.xl"
         minSdk = 24
         targetSdk = 37
-        versionCode = 41
-        versionName = "0.2.22"
+        versionCode = 41 * 100 + 1
+        versionName = "0.2.22-xl.1"
 
     }
 
